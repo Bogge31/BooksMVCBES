@@ -8,7 +8,7 @@ namespace BooksMVC.Domain
 {
     public class BooksDataContext : DbContext
     {
-        protected BooksDataContext(DbContextOptions<BooksDataContext> options) : base(options)
+        public BooksDataContext(DbContextOptions<BooksDataContext> options) : base(options)
         {
         }
 
