@@ -1,0 +1,19 @@
+﻿<h3>SaleItems</h3>
+<ul class="list-unstyled">
+    @foreach (var book in SalesBooks)
+    {
+        <li class="alert alert-info">
+            Book @book.Title is on Sale! Shop Now!
+        </li>
+    }
+</ul>
+@code {
+    public List<BooksMVC.Domain.Book> SalesBooks = new List<Domain.Book>
+{
+        new Domain.Book {Id=1, Title="Jaws", Author="Jones", InInventory=true,NumberOfPages=345}
+    };
+    protected override void OnInitialized()
+    {
+        //base.OnInitialized();
+    }
+}
